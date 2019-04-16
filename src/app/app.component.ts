@@ -16,9 +16,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Metas',
+      url: '/metas',
+      icon: 'podium'
+    },
+    {
+      title: 'Relatório',
+      url: '/relatorio',
+      icon: 'paper'
+    },
+    {
+      title: 'Lembrete',
+      url: '/lembrete',
+      icon: 'time'
+    },
+    {
+      title: 'Configuração',
+      url: '/configuracao',
+      icon: 'build'
     }
   ];
 

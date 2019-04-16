@@ -1,5 +1,7 @@
 {
   "name": "strengthen",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

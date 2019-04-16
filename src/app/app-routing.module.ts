@@ -12,8 +12,20 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
+    path: 'metas',
+    loadChildren: './metas/metas.module#MetasPageModule'
+  },
+  {
+    path: 'relatorio',
+    loadChildren: './relatorio/relatorio.module#RelatorioPageModule'
+  },
+  {
+    path: 'lembrete',
+    loadChildren: './lembrete/lembrete.module#LembretePageModule'
+  },
+  {
+    path: 'configuracao',
+    loadChildren: './configuracao/configuracao.module#ConfiguracaoPageModule'
   }
 ];
 
@@ -23,4 +35,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
