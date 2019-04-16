@@ -1,0 +1,47 @@
+ion-content {
+    --color: white;
+    --keyboard-offset: 0px;
+    --offset-bottom: 0px;
+    --offset-top: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+    --margin-top: 0px;
+
+    div{
+        text-align: center;
+        font-family: "calibri";
+        margin-top: 197px;
+        font-size: 120%;
+    }
+
+    ion-button{
+        margin-top: 70px;
+        font-family: "calibri";
+    }
+    ion-label{
+        font-family: "calibri";
+        
+    }
+    ion-list{
+        margin-top: 40px;
+        background: rgba(0,0,0,0);
+        
+    }
+    ion-item{
+        --background: rgba(0,0,0,0);
+        --border-color: rgba(0,0,0,0);
+        --color: white;
+        
+    }
+    ion-radio{
+        color: white;
+    }
+    body{
+        background-image: url(img9.jpg);
+        background-size: 100%;
+        background-position: center;
+     }
+}
+
