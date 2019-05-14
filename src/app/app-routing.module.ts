@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'step',
     pathMatch: 'full'
   },
   {
@@ -30,7 +30,9 @@ const routes: Routes = [
   { path: 'step', loadChildren: './step/step.module#StepPageModule' },
   { path: 'step', loadChildren: './step/step.module#StepPageModule' },
   { path: 'userlevel', loadChildren: './userlevel/userlevel.module#UserlevelPageModule' },
-  { path: 'remainingdays', loadChildren: './remainingdays/remainingdays.module#RemainingdaysPageModule' },  { path: 'traningrelease', loadChildren: './traningrelease/traningrelease.module#TraningreleasePageModule' },
+  { path: 'remainingdays', loadChildren: './remainingdays/remainingdays.module#RemainingdaysPageModule' },
+  { path: 'traningrelease', loadChildren: './traningrelease/traningrelease.module#TraningreleasePageModule' },
+  { path: 'goals', loadChildren: './goals/goals.module#GoalsPageModule' },
 
  
  

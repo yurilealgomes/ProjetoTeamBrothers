@@ -16,36 +16,6 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Metas',
-      url: '/metas',
-      icon: 'podium'
-    },
-    {
-      title: 'Relatório',
-      url: '/relatorio',
-      icon: 'paper'
-    },
-    {
-      title: 'Lembrete',
-      url: '/lembrete',
-      icon: 'time'
-    },
-    {
-      title: 'Configuração',
-      url: '/configuracao',
-      icon: 'build'
-    },
-    {
-      title: 'Step',
-      url: '/step',
-      icon: 'star'
-    },
-    {
-      title: 'userlevel',
-      url: '/userlevel',
-      icon: 'star'
-    },
-    {
       title: 'Remaining Days',
       url: '/remainingdays',
       icon: 'calendar'
