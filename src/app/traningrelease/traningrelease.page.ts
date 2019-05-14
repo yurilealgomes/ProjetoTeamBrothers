@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import PerfectScrollbar from 'perfect-scrollbar';
+
 
 @Component({
   selector: 'app-traningrelease',
@@ -11,6 +13,13 @@ export class TraningreleasePage implements OnInit {
 
   ngOnInit() {
   }
+  
+  @ViewChild('perfectScrollbar') perfectScrollbar: ElementRef;
+
+  ngAfterViewInit() {
+    new PerfectScrollbar(this.perfectScrollbar.nativeElement);
+  }
+
   dificuldade = 'Facil';
   treino = '25';
 }
