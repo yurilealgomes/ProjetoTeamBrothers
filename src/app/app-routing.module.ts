@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'metas',
-    loadChildren: './metas/metas.module#MetasPageModule'
-  },
-  {
     path: 'relatorio',
     loadChildren: './relatorio/relatorio.module#RelatorioPageModule'
   },
@@ -31,8 +27,9 @@ const routes: Routes = [
   { path: 'step', loadChildren: './step/step.module#StepPageModule' },
   { path: 'userlevel', loadChildren: './userlevel/userlevel.module#UserlevelPageModule' },
   { path: 'remainingdays', loadChildren: './remainingdays/remainingdays.module#RemainingdaysPageModule' },
-  { path: 'traningrelease', loadChildren: './traningrelease/traningrelease.module#TraningreleasePageModule' },
-  { path: 'goals', loadChildren: './goals/goals.module#GoalsPageModule' },
+  { path: 'trainingrelease', loadChildren: './trainingrelease/trainingrelease.module#TrainingreleasePageModule' },
+  { path: 'activity', loadChildren: './activity/activity.module#ActivityPageModule' },
+
 
  
  

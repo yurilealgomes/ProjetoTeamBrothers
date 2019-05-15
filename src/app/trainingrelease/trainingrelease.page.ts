@@ -3,11 +3,11 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 
 @Component({
-  selector: 'app-traningrelease',
-  templateUrl: './traningrelease.page.html',
-  styleUrls: ['./traningrelease.page.scss'],
+  selector: 'app-trainingrelease',
+  templateUrl: './trainingrelease.page.html',
+  styleUrls: ['./trainingrelease.page.scss'],
 })
-export class TraningreleasePage implements OnInit {
+export class TrainingreleasePage implements OnInit {
 
   constructor() { }
 
@@ -20,6 +20,6 @@ export class TraningreleasePage implements OnInit {
     new PerfectScrollbar(this.perfectScrollbar.nativeElement);
   }
 
-  dificuldade = 'Facil';
+  dificuldade = 'Fácil';
   treino = '25';
 }

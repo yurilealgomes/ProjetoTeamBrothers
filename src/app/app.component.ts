@@ -11,18 +11,43 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Tela Inicial',
       url: '/home',
       icon: 'home'
     },
     {
-      title: 'Remaining Days',
+      title: 'Dias restantes',
       url: '/remainingdays',
       icon: 'calendar'
     },
     {
-      title: 'Traning Release',
-      url: '/traningrelease',
+      title: 'Atividades',
+      url: '/activity',
+      icon: 'walk'
+    },
+    {
+      title: 'Relatório',
+      url: '#',
+      icon: 'bookmarks'
+    },
+    {
+      title: 'Lembrete',
+      url: '#',
+      icon: 'alarm'
+    },
+    {
+      title: 'Configuração',
+      url: '#',
+      icon: 'cog'
+    },
+    {
+      title: 'Descanso',
+      url: '#',
+      icon: 'bicycle'
+    },
+    {
+      title: 'Fim de atividade',
+      url: '#',
       icon: 'bicycle'
     }
   ];
@@ -30,7 +55,7 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
   ) {
     this.initializeApp();
   }

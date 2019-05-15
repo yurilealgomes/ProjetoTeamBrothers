@@ -3,23 +3,23 @@
     <div>Por onde deseja começar ? </div>
     
     <ion-list style="background-color:rgba(0, 0, 0, 0.3);">
-      <ion-radio-group name="Level">
+      <ion-radio-group name="Level" [(ngModel)]="selectedLevel">
         <ion-item>
           <ion-label>Iniciante</ion-label>
-          <ion-radio color="light" value="iniciante"></ion-radio>
+          <ion-radio name="iniciante" color="light" value="iniciante" required></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Intermediário</ion-label>
-          <ion-radio color="light" value="intermediário"></ion-radio>
+          <ion-radio color="light" value="intermediário" required></ion-radio>
         </ion-item>
         <ion-item>
           <ion-label>Avançado</ion-label>
-          <ion-radio color="light" value="avançado"></ion-radio>
+          <ion-radio color="light" value="avançado" required></ion-radio>
         </ion-item>
       </ion-radio-group>
     </ion-list>
 
-    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active" color="primary" expand= "full" shape= "round" fill='outline' >Começar</ion-button>
+    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active" color="primary" expand= "full" shape= "round" fill='outline' *ngIf="selectedLevel" (click)="defineDificuldade(selectedLevel)">Começar</ion-button>
   </body>
 </ion-content>
 

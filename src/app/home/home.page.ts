@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 import PerfectScrollbar from 'perfect-scrollbar';
+import { UserlevelPage } from '../userlevel/userlevel.page';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
   ngOnInit() {
   }
 
@@ -15,5 +17,5 @@ export class HomePage {
   ngAfterViewInit() {
     new PerfectScrollbar(this.perfectScrollbar.nativeElement);
   }
-
+  
 }

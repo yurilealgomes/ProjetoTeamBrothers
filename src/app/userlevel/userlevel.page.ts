@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserlevelPage implements OnInit {
 
+  userChoiceLevel: any;
   constructor() { }
 
   ngOnInit() {
   }
 
+  defineDificuldade(dificuldade) {
+    this.userChoiceLevel = dificuldade;
+  }
 }

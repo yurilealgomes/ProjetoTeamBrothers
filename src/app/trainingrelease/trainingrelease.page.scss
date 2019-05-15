@@ -1,0 +1,43 @@
+ion-title {
+  text-align: center;
+  font-family: "calibri";
+}
+.treino {
+  margin-left: 5%;
+  margin-top: 0%;
+  font-family: "calibri";
+  font-size: 110%;
+}
+.dif {
+  margin-left: 72%;
+  margin-top: 0%;
+  font-family: "calibri";
+  font-size: 110%;
+}
+
+.cardtitle {
+  font-size: 100%;
+}
+
+.cardi {
+  margin-top: 10%;
+}
+
+.botao {
+  font-family: "calibri";
+  position: fixed;
+  bottom: 0%;
+  left: 35%;
+}
+
+::ng-deep {
+  @import "~perfect-scrollbar/css/perfect-scrollbar";
+}
+
+:host {
+  div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
