@@ -20,19 +20,30 @@ const routes: Routes = [
     loadChildren: './lembrete/lembrete.module#LembretePageModule'
   },
   {
-    path: 'configuracao',
-    loadChildren: './configuracao/configuracao.module#ConfiguracaoPageModule'
+    path: 'step',
+    loadChildren: './step/step.module#StepPageModule'
   },
-  { path: 'step', loadChildren: './step/step.module#StepPageModule' },
-  { path: 'step', loadChildren: './step/step.module#StepPageModule' },
-  { path: 'userlevel', loadChildren: './userlevel/userlevel.module#UserlevelPageModule' },
-  { path: 'remainingdays', loadChildren: './remainingdays/remainingdays.module#RemainingdaysPageModule' },
-  { path: 'trainingrelease', loadChildren: './trainingrelease/trainingrelease.module#TrainingreleasePageModule' },
-  { path: 'activity', loadChildren: './activity/activity.module#ActivityPageModule' },
+  {
+    path: 'userlevel',
+    loadChildren: './userlevel/userlevel.module#UserlevelPageModule'
+  },
+  {
+    path: 'remainingdays',
+    loadChildren: './remainingdays/remainingdays.module#RemainingdaysPageModule'
+  },
+  {
+    path: 'trainingrelease',
+    loadChildren: './trainingrelease/trainingrelease.module#TrainingreleasePageModule'
+  },
+  {
+    path: 'activity',
+    loadChildren: './activity/activity.module#ActivityPageModule'
+  },
+  {
+    path: 'rest',
+    loadChildren: './rest/rest.module#RestPageModule'
+  },
 
-
- 
- 
 ];
 
 @NgModule({

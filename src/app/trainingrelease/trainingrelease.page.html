@@ -1,115 +1,42 @@
-<div #perfectScrollbar>
-  <ion-header>
-    <ion-toolbar color='primary'>
-      <ion-title>Corpo Todo</ion-title>
-      <ion-button [routerLink]="['/remainingdays']" routerLinkActive="router-link-active" fill='clear' size="small">
+<!-- <div #perfectScrollbar> -->
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/remainingdays']" routerLinkActive="router-link-active">
         <ion-icon name="arrow-back" color="dark"></ion-icon>
       </ion-button>
-    </ion-toolbar>
-  </ion-header>
+    </ion-buttons>
+    <ion-title slot="start">CORPO TODO</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-content style="margin-bottom: 50px; margin-top: 15px">
-    <ion-item>
-      <div class="treino">
-        {{treino}}
-      </div>
-      <div class="dif">
-        {{dificuldade}}
-      </div>
-    </ion-item>
+<ion-content fullscreen='true' scrollX='false' color="light">
+  <ion-item>
+    <div class="treino">
+      <b>Exercícios:</b> {{day2.length}}
+    </div>
+    <div class="dif">
+      {{dificuldade}}
+    </div>
+  </ion-item>
 
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-card>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-label><b>Saltar à Corda</b></ion-label>
-            <br><br>
-            <ion-label>22 Segundos</ion-label>
-          </ion-col>
-          <ion-col size="3">
-            <ion-img src="assets/teste.gif" style="width: 50px; height: 50px"></ion-img>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card>
-
-    <ion-button class="botao" expand="block">
-      Iniciar
-    </ion-button>
-  </ion-content>
-</div>
+  <ion-card *ngFor="let day of day2; let i = index;">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label><b>{{day2[i].name}}</b></ion-label>
+          <br><br>
+          <ion-label *ngIf="day2[i].seconds != null">{{day2[i].seconds}} segundos</ion-label>
+          <ion-label *ngIf="day2[i].rep != null">{{day2[i].rep}}</ion-label>
+        </ion-col>
+        <ion-col size="3">
+          <ion-img src='{{day2[i].gifPath}}' style="width: 50px; height: 50px"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-button class="botao" [routerLink]="['/activity']" routerLinkActive="router-link-active">
+    Iniciar
+  </ion-button>
+</ion-content>
+<!-- </div> -->

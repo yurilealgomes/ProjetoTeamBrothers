@@ -1,230 +1,258 @@
-<div #perfectScrollbar>
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<!-- <div #perfectScrollbar> -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-content>
-    <ion-item-divider>
-      <ion-card style="background-image: url(assets/corpo.jpg); 
-        background-position: top; 
+<ion-content fullscreen='true' scrollX='false' color="light">
+  <ion-card style="background-image: url(assets/corpo-todo.png); 
+        background-position: center; 
         background-size: 100%; 
-        width: 100%; 
-        height: 100px;">
-        <ion-card-header>
-          <ion-row>
-            <ion-col>
-              <b>CORPO TODO</b>
-            </ion-col>
-            <ion-col size="4">
-              Desafio 7X4
-            </ion-col>
-          </ion-row>
-        </ion-card-header>
-      </ion-card>
-    </ion-item-divider>
-    <ion-label style="padding-left: 15px;"><b>Peito</b></ion-label>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+        width: 93.3%; 
+        height: 100px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.2)" [routerLink]="['/remainingdays']" routerLinkActive="router-link-active">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">CORPO TODO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-label style="padding-left: 15px;"><b>Peito</b></ion-label>
+  <ion-card style="background-image: url(assets/peito-iniciante.jpg); 
+      background-position: bottom; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.8)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PEITO INICIANTE</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/peito-intermediario.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PEITO INICIANTE</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PEITO INTERMEDIÁRIO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/peito-avancado.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PEITO INTERMEDIÁRIO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PEITO AVANÇADO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-label style="padding-left: 15px;"><b>Abdômen</b></ion-label>
+  <ion-card style="background-image: url(assets/abdomen-iniciante.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PEITO AVANÇADO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-label style="padding-left: 15px;"><b>Abdômen</b></ion-label>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">ABDÔMEN INICIANTE</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/abdomen-intermediario.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>ABDÔMEN INICIANTE</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">ABDÔMEN INTERMEDIÁRIO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/abdomen-avancado.jpg); 
+      background-position: center; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">ABDÔMEN AVANÇADO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-label style="padding-left: 15px;"><b>Braço</b></ion-label>
+  <ion-card style="background-image: url(assets/braco-iniciante.jpg); 
+      background-position: bottom; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">BRAÇO INICIANTE</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/braco-intermediario.jpg); 
+      background-position: bottom; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">BRAÇO INTERMEDIÁRIO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/braco-avancado.jpg); 
+      background-position: center; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">BRAÇO AVANÇADO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-label style="padding-left: 15px;"><b>Costas e ombros</b></ion-label>
+  <ion-card style="background-image: url(assets/costas-ombro-iniciante.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>ABDÔMEN INTERMEDIÁRIO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">COSTAS E OMBROS INICIANTE</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/costas-ombro-intermediario.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>ABDÔMEN AVANÇADO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-label style="padding-left: 15px;"><b>Braço</b></ion-label>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">COSTAS E OMBROS INTERMEDIÁRIO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/costas-ombro-avancado.jpg); 
+      background-position: center; 
+      background-size: 100%; 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">COSTAS E OMBROS AVANÇADO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-label style="padding-left: 15px;"><b>Perna</b></ion-label>
+  <ion-card style="background-image: url(assets/perna-iniciante.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>BRAÇO INICIANTE</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PERNA INICIANTE</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/perna-intermediario.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>BRAÇO INTERMEDIÁRIO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PERNA INTERMEDIÁRIO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-card style="background-image: url(assets/perna-avancado.jpg); 
       background-position: top; 
       background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>BRAÇO AVANÇADO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-label style="padding-left: 15px;"><b>Costas e ombros</b></ion-label>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>COSTAS E OMBROS INICIANTE</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>COSTAS E OMBROS INTERMEDIÁRIO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>COSTAS E OMBROS AVANÇADO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-label style="padding-left: 15px;"><b>Perna</b></ion-label>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PERNA INICIANTE</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PERNA INTERMEDIÁRIO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-    <ion-card style="background-image: url(assets/corpo.jpg); 
-      background-position: top; 
-      background-size: 100%; 
-      width: 100%; 
-      height: 100px;">
-      <ion-card-header>
-        <ion-row>
-          <ion-col>
-            <b>PERNA AVANÇADO</b>
-          </ion-col>
-        </ion-row>
-      </ion-card-header>
-    </ion-card>
-  </ion-content>
-</div>
+      width: 93.3%; 
+      height: 100px;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.2)">
+    <ion-card-header>
+      <ion-row style="background-color: rgba(0,0,0,0.2)">
+        <ion-col>
+          <b style="color:gainsboro">PERNA AVANÇADO</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+<!-- </div> -->

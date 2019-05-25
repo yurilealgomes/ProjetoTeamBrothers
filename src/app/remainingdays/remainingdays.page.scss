@@ -1,7 +1,3 @@
-ion-content {
-  margin-top: 0px;
-}
-
 progress-bar {
   background-color: white;
   font-family: "calibri";
@@ -13,15 +9,25 @@ ion-title {
   font-family: "calibri";
 }
 
-.iniciar {
-  margin-top: 100%;
-  font-family: "calibri";
-  font-size: 110%;
-}
-
 .diasrestantes {
   text-align: center;
   font-size: 110%;
   margin-top: 10%;
   font-family: "calibri";
+}
+
+::ng-deep {
+  @import "~perfect-scrollbar/css/perfect-scrollbar";
+}
+
+:host {
+  div {
+    position: sticky;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  ion-content {
+    margin-top: 0px;
+  }
 }

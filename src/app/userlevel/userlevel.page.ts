@@ -14,6 +14,7 @@ export class UserlevelPage implements OnInit {
   }
 
   defineDificuldade(dificuldade) {
+    console.log('Selected level ~~> ', dificuldade);
     this.userChoiceLevel = dificuldade;
   }
 }

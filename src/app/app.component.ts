@@ -16,16 +16,6 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Dias restantes',
-      url: '/remainingdays',
-      icon: 'calendar'
-    },
-    {
-      title: 'Atividades',
-      url: '/activity',
-      icon: 'walk'
-    },
-    {
       title: 'Relatório',
       url: '#',
       icon: 'bookmarks'
@@ -34,21 +24,6 @@ export class AppComponent {
       title: 'Lembrete',
       url: '#',
       icon: 'alarm'
-    },
-    {
-      title: 'Configuração',
-      url: '#',
-      icon: 'cog'
-    },
-    {
-      title: 'Descanso',
-      url: '#',
-      icon: 'bicycle'
-    },
-    {
-      title: 'Fim de atividade',
-      url: '#',
-      icon: 'bicycle'
     }
   ];
 

@@ -1,179 +1,209 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Corpo Todo</ion-title>
-    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active" fill='clear' size="small">
-      <ion-icon name="arrow-back" color="dark"></ion-icon>
-    </ion-button>
-  </ion-toolbar>
-</ion-header>
+<!-- <div #perfectScrollbar> -->
+  <ion-header>
+    <ion-toolbar color='primary'>
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active">
+          <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title slot="start">CORPO TODO</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content style="--overflow: hidden;">
-  <div class="diasrestantes">
-    {{remainingDays}} dias restantes
-  </div>
-  <progress-bar [progress]="loadProgress" [color]="'#57c79a'"> </progress-bar>
+  <ion-content fullscreen='true' scrollX='false' color="light">
+    <ion-row class="ion-justify-content-center" style="margin-top:3%">
+      {{remainingDays}} dia(s) restante(s)
+    </ion-row>
+    <progress-bar [progress]="calcRemainingDays" [color]="'#422888'"> </progress-bar>
 
-  <ion-row class="ion-justify-content-center">
-    Semana 1
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="1.66">
-      <ion-button [routerLink]="['/trainingrelease']" routerLinkActive="router-link-active">
-        1
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        2
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        3
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        4
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        5
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        6
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        7
-      </ion-button>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="ion-justify-content-center">
-    Semana 2
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="1.66">
-      <ion-button disabled>
-        1
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        2
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        3
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        4
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        5
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        6
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        7
-      </ion-button>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="ion-justify-content-center">
-    Semana 3
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="1.66">
-      <ion-button disabled>
-        1
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        2
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        3
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        4
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        5
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        6
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        7
-      </ion-button>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="ion-justify-content-center">
-    Semana 4
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="1.66">
-      <ion-button disabled>
-        1
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        2
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        3
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        4
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        5
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        6
-      </ion-button>
-    </ion-col>
-    <ion-col size="1.66">
-      <ion-button disabled>
-        7
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-content>
+    <ion-row class="ion-justify-content-center">
+      Semana 1
+    </ion-row>
+    <ion-row fxLayout='row'>
+      <ion-col style="margin-left: 3%">
+        <ion-button [routerLink]="['/trainingrelease']" routerLinkActive="router-link-active"
+          style="--border-radius: 50px">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          4
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          7
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          <ion-icon name="trophy"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      Semana 2
+    </ion-row>
+    <ion-row fxLayout='row'>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          4
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          7
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          <ion-icon name="trophy"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      Semana 3
+    </ion-row>
+    <ion-row fxLayout='row'>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          4
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          7
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          <ion-icon name="trophy"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      Semana 4
+    </ion-row>
+    <ion-row fxLayout='row'>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          4
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          7
+        </ion-button>
+      </ion-col>
+      <ion-col style="margin-left: 3%">
+        <ion-button disabled style="--border-radius: 50px">
+          <ion-icon name="trophy"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+<!-- </div> -->
