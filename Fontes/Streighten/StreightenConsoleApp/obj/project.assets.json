@@ -743,11 +743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\StreightenConsoleApp\\StreightenConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\StreightenConsoleApp\\StreightenConsoleApp.csproj",
       "projectName": "StreightenConsoleApp",
-      "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\StreightenConsoleApp\\StreightenConsoleApp.csproj",
+      "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\StreightenConsoleApp\\StreightenConsoleApp.csproj",
       "packagesPath": "C:\\Users\\Pedro Cassone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\StreightenConsoleApp\\obj\\",
+      "outputPath": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\StreightenConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -766,8 +766,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj": {
-              "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj"
+            "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj": {
+              "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj"
             }
           }
         }

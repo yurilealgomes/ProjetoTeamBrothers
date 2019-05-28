@@ -725,11 +725,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj",
       "projectName": "Streighten.Domain",
-      "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj",
+      "projectPath": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\Streighten.Domain\\Streighten.Domain.csproj",
       "packagesPath": "C:\\Users\\Pedro Cassone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro Cassone\\Desktop\\Fontes\\Streighten\\Streighten.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Pedro Cassone\\Desktop\\ProjetoTeamBrothers\\Fontes\\Streighten\\Streighten.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
