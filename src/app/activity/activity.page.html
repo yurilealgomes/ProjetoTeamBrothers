@@ -1,20 +1,30 @@
-<ion-content fullscreen='true' scrollX='false' scrollY='false' color="light">
+<ion-content text-center fullscreen='true' scrollX='false' scrollY='false' color="light">
   <ion-grid>
     <ion-row>
-      <ion-img src='{{day2[5].gifPath}}' style="width: 80%; height: 80%; margin: 20%"></ion-img>
+      <ion-img src='{{data.gifPath}}' style="width: 250px; height: 120px; margin: 20%"></ion-img>
     </ion-row>
-    <ion-row style="font-size: 45pt;" class="ion-justify-content-center">
-      {{day2[5].name}}
+    <ion-row style="font-size: 150%;" class="ion-justify-content-center">
+      {{data.name}}
     </ion-row>
-    <ion-row>
-      <ion-col></ion-col>
+
+    <div *ngIf="data.rep != null" style="font-size: 250%; margin-top: 25%">
+      <ion-row class="ion-justify-content-center">
+        {{data.rep}}
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-button style="bottom: 0px; position:fixed" [routerLink]="['/rest/']"
+          routerLinkActive="router-link-active" color="primary" expand="full" shape="round" fill='outline'>Próximo
+          exercício</ion-button>
+      </ion-row>
+    </div>
+
+    <ion-row *ngIf="data.seconds != null">
       <ion-col>
-        <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="100" [outerStrokeWidth]="5"
+        <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="60" [outerStrokeWidth]="4"
           [innerStrokeWidth]="3" [outerStrokeColor]="'#422888'" [innerStrokeColor]="'#422888'" [animation]="false"
           [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
           [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
       </ion-col>
-      <ion-col></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

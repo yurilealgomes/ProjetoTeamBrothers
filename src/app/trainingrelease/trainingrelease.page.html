@@ -1,4 +1,3 @@
-<!-- <div #perfectScrollbar> -->
 <ion-header>
   <ion-toolbar color='primary'>
     <ion-buttons slot="start">
@@ -13,30 +12,29 @@
 <ion-content fullscreen='true' scrollX='false' color="light">
   <ion-item>
     <div class="treino">
-      <b>Exercícios:</b> {{day2.length}}
+      <b>Exercícios:</b> {{day.length}}
     </div>
     <div class="dif">
       {{dificuldade}}
     </div>
   </ion-item>
 
-  <ion-card *ngFor="let day of day2; let i = index;">
+  <ion-card *ngFor="let count of day; let i = index;">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-label><b>{{day2[i].name}}</b></ion-label>
+          <ion-label><b>{{day[i].name}}</b></ion-label>
           <br><br>
-          <ion-label *ngIf="day2[i].seconds != null">{{day2[i].seconds}} segundos</ion-label>
-          <ion-label *ngIf="day2[i].rep != null">{{day2[i].rep}}</ion-label>
+          <ion-label *ngIf="day[i].seconds != null">{{day[i].seconds}} segundos</ion-label>
+          <ion-label *ngIf="day[i].rep != null">{{day[i].rep}}</ion-label>
         </ion-col>
         <ion-col size="3">
-          <ion-img src='{{day2[i].gifPath}}' style="width: 50px; height: 50px"></ion-img>
+          <ion-img src='{{day[i].gifPath}}' style="width: 50px; height: 50px"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-button class="botao" [routerLink]="['/activity']" routerLinkActive="router-link-active">
+  <ion-button class="botao" [routerLink]="['/activity/']" routerLinkActive="router-link-active">
     Iniciar
   </ion-button>
 </ion-content>
-<!-- </div> -->

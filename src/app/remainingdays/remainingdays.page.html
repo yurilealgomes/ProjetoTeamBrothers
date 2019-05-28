@@ -1,8 +1,7 @@
-<!-- <div #perfectScrollbar> -->
   <ion-header>
     <ion-toolbar color='primary'>
       <ion-buttons slot="start">
-        <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <ion-button [routerLink]="['/home/', {level: dificuldade}]" routerLinkActive="router-link-active">
           <ion-icon name="arrow-back" color="dark"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -206,4 +205,3 @@
       </ion-col>
     </ion-row>
   </ion-content>
-<!-- </div> -->

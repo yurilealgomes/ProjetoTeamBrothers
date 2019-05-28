@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, Input } from '@angular/core';
-import PerfectScrollbar from 'perfect-scrollbar';
 import { UserlevelPage } from '../userlevel/userlevel.page';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +9,14 @@ import { UserlevelPage } from '../userlevel/userlevel.page';
 })
 export class HomePage {
 
+  @ViewChild(UserlevelPage) public variavel: UserlevelPage;
+
+  dificuldade: any;
+
+  constructor(private router: ActivatedRoute) {}
+
   ngOnInit() {
+    this.dificuldade = this.router.snapshot.params['level'];
+    console.log('Recebido ~~~~~>', this.router.snapshot.params['level'])
   }
-
-  @ViewChild('perfectScrollbar') perfectScrollbar: ElementRef;
-
-  ngAfterViewInit() {
-    new PerfectScrollbar(this.perfectScrollbar.nativeElement);
-  }
-  
 }

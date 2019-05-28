@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {ProgressBarModule} from "angular-progress-bar";
-import PerfectScrollbar from 'perfect-scrollbar';
+import { ActivatedRoute } from '@angular/router';
+import { UserlevelPage } from '../userlevel/userlevel.page';
+import { HomePage } from '../home/home.page';
 @Component({
   selector: 'app-remainingdays',
   templateUrl: './remainingdays.page.html',
@@ -8,7 +10,12 @@ import PerfectScrollbar from 'perfect-scrollbar';
 })
 export class RemainingdaysPage implements OnInit {
   loadProgress = 0;
-  constructor() { }
+
+  @ViewChild(HomePage) public variavel: HomePage;
+
+  dificuldade: any;
+
+  constructor(private router: ActivatedRoute) {}
 
   ngOnInit() {
     setInterval(() => {
@@ -17,16 +24,11 @@ export class RemainingdaysPage implements OnInit {
       else
         clearInterval(this.loadProgress);
     }, 100);
+
+    this.dificuldade = this.router.snapshot.params['level'];
+    console.log('Recebido ~~~~~>', this.router.snapshot.params['level'])
   }
   
-  remainingDays = 27;
+  remainingDays = 28;
   calcRemainingDays = (28-this.remainingDays)/28*100;
-
-  
-  @ViewChild('perfectScrollbar') perfectScrollbar: ElementRef;
-
-  ngAfterViewInit() {
-    new PerfectScrollbar(this.perfectScrollbar.nativeElement);
-  }
-
 }

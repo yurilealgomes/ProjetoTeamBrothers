@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-userlevel',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserlevelPage implements OnInit {
 
-  userChoiceLevel: any;
+  @Input() userChoiceLevel: string;
+  
   constructor() { }
 
   ngOnInit() {

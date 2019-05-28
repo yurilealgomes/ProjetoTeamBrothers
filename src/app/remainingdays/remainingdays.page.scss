@@ -16,10 +16,6 @@ ion-title {
   font-family: "calibri";
 }
 
-::ng-deep {
-  @import "~perfect-scrollbar/css/perfect-scrollbar";
-}
-
 :host {
   div {
     position: sticky;

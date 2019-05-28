@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content text-center>
   <ion-row>
     <ion-col size="0.5"></ion-col>
     <ion-col style="font-size: 15pt; margin-top: 40%">Descanse alguns segundos!
@@ -6,34 +6,29 @@
     <ion-col size="0.5"></ion-col>
   </ion-row>
   <ion-row>
-    <ion-col></ion-col>
     <ion-col>
       <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="100" [outerStrokeWidth]="5"
         [innerStrokeWidth]="3" [outerStrokeColor]="'#422888'" [innerStrokeColor]="'#422888'" [animation]="false"
         [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
         [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
     </ion-col>
-    <ion-col></ion-col>
   </ion-row>
   <ion-row>
-    <ion-col size="3"></ion-col>
     <ion-col>Próximo exercício</ion-col>
-    <ion-col size="3"></ion-col>
   </ion-row>
   <ion-row>
     <ion-col></ion-col>
     <ion-card padding>
       <ion-col style="font-size: 15pt">
-        {{day2[5].name}}
+        {{data.name}}
       </ion-col>
-      <ion-col style="font-size: 15pt" *ngIf="day2[5].rep != null">
-        {{day2[5].rep}} repetições
+      <ion-col style="font-size: 15pt" *ngIf="data.rep != null">
+        {{data.rep}} repetições
       </ion-col>
-      <ion-col style="font-size: 15pt" *ngIf="day2[5].seconds != null">
-        {{day2[5].seconds}} segundos
+      <ion-col style="font-size: 15pt" *ngIf="data.seconds != null">
+        {{data.seconds}} segundos
       </ion-col>
     </ion-card>
     <ion-col></ion-col>
   </ion-row>
-  <!-- <progress-bar [progress]="calcRemainingExercices" [color]="'#422888'" style="border-radius: 500px; max-width: 50px"> </progress-bar> -->
 </ion-content>

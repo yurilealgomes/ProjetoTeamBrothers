@@ -1,13 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { timer } from 'rxjs';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList, forwardRef, ContentChild, ɵConsole, Injectable } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { TrainingreleasePage } from '../trainingrelease/trainingrelease.page';
+import { RestPage } from '../rest/rest.page';
 
-export interface Data {
-  name: string;
-  rep: string;
-  gifPath: string;
-  seconds: number;
-}
 
 @Component({
   selector: 'app-activity',
@@ -17,41 +12,45 @@ export interface Data {
 
 export class ActivityPage implements OnInit {
 
+  dayData: any;
+  data: any;
+  index: number = 0;
+  timer: number = null;
+  transferData: any;
+  nextDay: any;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router,
+    private router: ActivatedRoute,
+    public teste: TrainingreleasePage) { }
 
   ngOnInit() {
+    this.dayData = this.teste.day;
+    console.log(this.dayData);
+
+    if (this.index < this.teste.day.length)
+      this.index = this.teste.index;
+    console.log(this.teste.index);
+
+    this.data = this.dayData[this.index];
+    this.teste.index += 1;
+    console.log('this.data ~~> ', this.dayData[this.index]);
+
+    if (this.data.seconds != null)
+      this.defineTempo()
+  }
+
+  defineTempo() {
+    this.timer = this.data.seconds;
     setInterval(() => {
-      if (this.timer != 0)
+      if (this.timer != 0 && this.timer != null)
         this.timer -= 1;
       else {
         clearInterval(this.timer);
-        this.route.navigate(['rest']);
+        this.timer = 5;
+        this.route.navigate(['/rest/']);
       }
     }, 1000);
-
   }
-
-  day2: Data[] = [
-    { name: 'Abdominais', rep: 'x 10', gifPath: 'assets/gif/Treino-Abdômen - 5 - Abdominal.gif', seconds: null },
-    { name: 'Abdominal russo', rep: 'x 12', gifPath: 'assets/gif/Treino-Abdômen - 11 - Abdominal Russo.gif', seconds: null },
-    { name: 'Montanha', rep: 'x 12', gifPath: 'assets/gif/Treino-Abdômen - 14 - Montanha.gif', seconds: null },
-    { name: 'Toque de calcanhar', rep: 'x 15', gifPath: 'assets/gif/Treino-Abdômen - 13 - Toque de Calcanhar.gif', seconds: null },
-    { name: 'Elevação de pernas', rep: 'x 12', gifPath: 'assets/gif/no.jpg', seconds: null },
-    { name: 'Prancha', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 16 - Prancha.gif', seconds: 30 },
-    { name: 'Abdominais', rep: 'x 10', gifPath: 'assets/gif/Treino-Abdômen - 5 - Abdominal.gif', seconds: null },
-    { name: 'Abdominal russo', rep: 'x 12', gifPath: 'assets/gif/Treino-Abdômen - 11 - Abdominal Russo.gif', seconds: null },
-    { name: 'Toque de calcanhar', rep: 'x 15', gifPath: 'assets/gif/Treino-Abdômen - 13 - Toque de Calcanhar.gif', seconds: null },
-    { name: 'Toque de calcanhar', rep: 'x 15', gifPath: 'assets/gif/Treino-Abdômen - 13 - Toque de Calcanhar.gif', seconds: null },
-    { name: 'Elevação de pernas', rep: 'x 12', gifPath: 'assets/gif/no.jpg', seconds: null },
-    { name: 'Prancha', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 16 - Prancha.gif', seconds: 30 },
-    { name: 'Alongamento cobra', rep: null, gifPath: 'assets/gif/Treino-Peito - 12 - Alongamento cobra.gif', seconds: 20 },
-    { name: 'Alongamento da coluna lombar lado esquerdo', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 18 - Alongamento da coluna lombar lado esquerdo.gif', seconds: 30 },
-    { name: 'Alongamento da coluna lombar lado esquerdo', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 19 - Alongamento da coluna lombar lado direito.gif', seconds: 30 },
-  ];
-
-  timer: any = this.day2[5].seconds;
-
 }
 
 

@@ -19,7 +19,7 @@
       </ion-radio-group>
     </ion-list>
 
-    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active" color="primary" expand= "full" shape= "round" fill='outline' *ngIf="selectedLevel" (click)="defineDificuldade(selectedLevel)">Começar</ion-button>
+    <ion-button [routerLink]="['/home/', {level: selectedLevel}]" routerLinkActive="router-link-active" color="primary" expand= "full" shape= "round" fill='outline' *ngIf="selectedLevel" (click)="defineDificuldade(selectedLevel)">Começar</ion-button>
   </body>
 </ion-content>
 

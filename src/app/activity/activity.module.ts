@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ActivityPage } from './activity.page';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TrainingreleasePage } from '../trainingrelease/trainingrelease.page';
 
 const routes: Routes = [
   {
@@ -31,6 +32,9 @@ const routes: Routes = [
       animationDuration: 300,
     })
   ],
-  declarations: [ActivityPage]
+  declarations: [ActivityPage],
+  providers: [
+    TrainingreleasePage
+  ]
 })
 export class ActivityPageModule {}

@@ -8,6 +8,8 @@ import { IonicModule } from '@ionic/angular';
 import { RestPage } from './rest.page';
 import { ProgressBarModule } from 'angular-progress-bar';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TrainingreleasePage } from '../trainingrelease/trainingrelease.page';
+import { ActivityPage } from '../activity/activity.page';
 
 const routes: Routes = [
   {
@@ -33,6 +35,9 @@ const routes: Routes = [
       animationDuration: 300,
     })
   ],
-  declarations: [RestPage]
+  declarations: [RestPage],
+  providers: [
+    TrainingreleasePage
+  ]
 })
 export class RestPageModule {}

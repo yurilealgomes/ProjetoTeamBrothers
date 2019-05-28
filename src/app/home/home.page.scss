@@ -5,10 +5,6 @@
   margin-top: 5%;
 }
 
-::ng-deep {
-  @import "~perfect-scrollbar/css/perfect-scrollbar";
-}
-
 :host {
   div {
     position: relative;
