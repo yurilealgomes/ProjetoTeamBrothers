@@ -1,0 +1,11 @@
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\bin\Debug\netcoreapp2.1\Streighten.Domain.deps.json
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\bin\Debug\netcoreapp2.1\Streighten.Domain.dll
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.csprojAssemblyReference.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.AssemblyInfoInputs.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.AssemblyInfo.cs
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\bin\Debug\netcoreapp2.1\Streighten.Domain.pdb
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.Resources.MSG.resources
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.csproj.GenerateResource.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.dll
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\Streighten.Domain\obj\Debug\netcoreapp2.1\Streighten.Domain.pdb

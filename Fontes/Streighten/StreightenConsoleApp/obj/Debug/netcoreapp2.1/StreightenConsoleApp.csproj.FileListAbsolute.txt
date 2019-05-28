@@ -1,0 +1,14 @@
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\StreightenConsoleApp.deps.json
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\StreightenConsoleApp.runtimeconfig.json
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\StreightenConsoleApp.runtimeconfig.dev.json
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\StreightenConsoleApp.dll
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\StreightenConsoleApp.pdb
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\Streighten.Domain.dll
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\bin\Debug\netcoreapp2.1\Streighten.Domain.pdb
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.csprojAssemblyReference.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.AssemblyInfo.cs
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.csproj.CopyComplete
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.dll
+C:\Users\Pedro Cassone\Desktop\Fontes\Streighten\StreightenConsoleApp\obj\Debug\netcoreapp2.1\StreightenConsoleApp.pdb
