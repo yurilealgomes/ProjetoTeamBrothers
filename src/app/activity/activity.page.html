@@ -1,30 +1,67 @@
-<ion-content text-center fullscreen='true' scrollX='false' scrollY='false' color="light">
-  <ion-grid>
+<ng-template [ngIf]=" template == 1">
+  <ion-content text-center fullscreen='true' scrollX='false' scrollY='false' color="light">
+    <ion-grid>
+      <ion-row>
+        <ion-img src='{{dayData[i].gifPath}}' style="width: 250px; height: 120px; margin: 20%"></ion-img>
+      </ion-row>
+      <ion-row style="font-size: 150%;" class="ion-justify-content-center">
+        {{dayData[i].name}}
+      </ion-row>
+
+      <div *ngIf="dayData[i].rep != null" style="font-size: 250%; margin-top: 25%">
+        <ion-row class="ion-justify-content-center">
+          {{dayData[i].rep}}
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button style="bottom: 0px; position:fixed" (click)="switchExercise()" color="primary" expand="full" shape="round" fill='outline'>Próximo
+            exercício</ion-button>
+        </ion-row>
+      </div>
+
+      <ion-row *ngIf="dayData[i].seconds != null">
+        <ion-col>
+          <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="60" [outerStrokeWidth]="4"
+            [innerStrokeWidth]="3" [outerStrokeColor]="'#422888'" [innerStrokeColor]="'#422888'" [animation]="false"
+            [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
+            [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ng-template>
+<ng-template [ngIf]=" template == 2" color="light">
+  <ion-content text-center>
     <ion-row>
-      <ion-img src='{{data.gifPath}}' style="width: 250px; height: 120px; margin: 20%"></ion-img>
+      <ion-col size="0.5"></ion-col>
+      <ion-col style="font-size: 15pt; margin-top: 40%">Descanse alguns segundos!
+      </ion-col>
+      <ion-col size="0.5"></ion-col>
     </ion-row>
-    <ion-row style="font-size: 150%;" class="ion-justify-content-center">
-      {{data.name}}
-    </ion-row>
-
-    <div *ngIf="data.rep != null" style="font-size: 250%; margin-top: 25%">
-      <ion-row class="ion-justify-content-center">
-        {{data.rep}}
-      </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-button style="bottom: 0px; position:fixed" [routerLink]="['/rest/']"
-          routerLinkActive="router-link-active" color="primary" expand="full" shape="round" fill='outline'>Próximo
-          exercício</ion-button>
-      </ion-row>
-    </div>
-
-    <ion-row *ngIf="data.seconds != null">
+    <ion-row>
       <ion-col>
-        <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="60" [outerStrokeWidth]="4"
+        <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="100" [outerStrokeWidth]="5"
           [innerStrokeWidth]="3" [outerStrokeColor]="'#422888'" [innerStrokeColor]="'#422888'" [animation]="false"
           [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
           [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
       </ion-col>
     </ion-row>
-  </ion-grid>
-</ion-content>
+    <ion-row>
+      <ion-col>Próximo exercício</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-card padding>
+        <ion-col style="font-size: 15pt">
+          {{dayData[i].name}}
+        </ion-col>
+        <ion-col style="font-size: 15pt" *ngIf="dayData[i].rep != null">
+          {{dayData[i].rep}} repetições
+        </ion-col>
+        <ion-col style="font-size: 15pt" *ngIf="dayData[i].seconds != null">
+          {{dayData[i].seconds}} segundos
+        </ion-col>
+      </ion-card>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-content>
+</ng-template>

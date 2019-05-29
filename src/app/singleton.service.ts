@@ -6,7 +6,7 @@ export class Index {
     static getInstance() {
         if (!Index.instance) {
             Index.instance = new Index();
-            Index.instance._indexer = 1;
+            Index.instance._indexer = 0;
         }
         return Index.instance;
     }
