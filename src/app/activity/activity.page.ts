@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ViewChildren, QueryList, forwardRef, Cont
 import { Router, ActivatedRoute } from '@angular/router';
 import { TrainingreleasePage } from '../trainingrelease/trainingrelease.page';
 import { RestPage } from '../rest/rest.page';
+import { Index } from '../singleton.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ActivityPage implements OnInit {
 
   dayData: any;
   data: any;
-  index: number = 0;
+  index: any;
   timer: number = null;
   transferData: any;
   nextDay: any;
@@ -24,16 +25,19 @@ export class ActivityPage implements OnInit {
     public teste: TrainingreleasePage) { }
 
   ngOnInit() {
+    const scoreindex = Index.getInstance();
+    this.index = scoreindex;
+    console.log("SCOREINDEX ~~~~~~~>>", scoreindex);
+
     this.dayData = this.teste.day;
-    console.log(this.dayData);
+    console.log("DAYDATA~~~~>",this.dayData);
 
-    if (this.index < this.teste.day.length)
-      this.index = this.teste.index;
-    console.log(this.teste.index);
+    if (this.index < this.dayData.length)
+      this.index = scoreindex.index._indexer;
+    console.log("FODA_SE PORRA ~~~~~~~~>>>>> ", this.index._indexer);
 
-    this.data = this.dayData[this.index];
-    this.teste.index += 1;
-    console.log('this.data ~~> ', this.dayData[this.index]);
+    this.data = this.dayData[this.index._indexer];
+    console.log('this.data ~~> ', this.dayData[this.index._indexer]);
 
     if (this.data.seconds != null)
       this.defineTempo()

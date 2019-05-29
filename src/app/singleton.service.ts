@@ -1,25 +1,27 @@
 
-export class Singleton {
-    private static instance: Singleton;
-    private _indexer: number;
+export class Index {
+    private static instance: Index;
+    private _indexer: any;
     private constructor() { }
     static getInstance() {
-        if (!Singleton.instance) {
-            Singleton.instance = new Singleton();
-            Singleton.instance._indexer = 0;
+        if (!Index.instance) {
+            Index.instance = new Index();
+            Index.instance._indexer = 1;
         }
-        return Singleton.instance;
+        return Index.instance;
     }
-    get index(): number {
+    get index(): any {
         return this._indexer;
     }
-    set index(score) {
-        this._indexer = score;
+    set index(any) {
+        this._indexer = any;
     }
-    increaseIndex(): number {
-        return this._indexer += 1;
+    increaseIndex(): any {
+        this._indexer = this._indexer + 1;
+        return this._indexer;
     }
-    decreaseIndex(): number {
+    decreaseIndex(): any {
         return this._indexer -= 1;
     }
+    
 }

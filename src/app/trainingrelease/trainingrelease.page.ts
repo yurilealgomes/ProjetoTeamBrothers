@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
+
 export interface Data {
   name: string;
   rep: string;
@@ -35,12 +36,11 @@ export class TrainingreleasePage implements OnInit {
     {name: 'Alongamento da coluna lombar lado direito', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 19 - Alongamento da coluna lombar lado direito.gif', seconds: 30},
   ];
 
-  data = JSON.stringify(this.day);
-  index: number = 0;
   
-  public setIndex(value){
-    this.index = value;
-  }
+
+  data = JSON.stringify(this.day);
+  index: any;
+
   
   constructor() { }
 
