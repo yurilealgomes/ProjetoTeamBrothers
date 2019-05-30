@@ -13,14 +13,15 @@
           {{dayData[i].rep}}
         </ion-row>
         <ion-row class="ion-justify-content-center">
-          <ion-button style="bottom: 0px; position:fixed" (click)="switchExercise()" color="primary" expand="full" shape="round" fill='outline'>Próximo
+          <ion-button style="bottom: 0px; position:fixed" (click)="switchExercise()" color="primary" expand="full"
+            shape="round" fill='outline'>Próximo
             exercício</ion-button>
         </ion-row>
       </div>
 
       <ion-row *ngIf="dayData[i].seconds != null">
         <ion-col>
-          <circle-progress class="ion-justify-content-center" [percent]="timer" [radius]="60" [outerStrokeWidth]="4"
+          <circle-progress class="ion-justify-content-center" [percent]="countsec" [radius]="60" [outerStrokeWidth]="4"
             [innerStrokeWidth]="3" [outerStrokeColor]="'#422888'" [innerStrokeColor]="'#422888'" [animation]="false"
             [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
             [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
@@ -44,9 +45,6 @@
           [animationDuration]="300" [showTitle]="true" [title]="Descanso" [showSubtitle]="false" [maxPercent]="30"
           [showUnits]="false" [renderOnClick]="false" [maxPercent]="30" disabled></circle-progress>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Próximo exercício</ion-col>
     </ion-row>
     <ion-row>
       <ion-col></ion-col>
