@@ -19,7 +19,7 @@ export class RestPage implements OnInit {
   index: any;
 
 
- 
+
 
   constructor(private router: ActivatedRoute,
     public teste: TrainingreleasePage,
@@ -28,14 +28,9 @@ export class RestPage implements OnInit {
   ngOnInit() {
     const scoreIndex = Index.getInstance();
     this.index = scoreIndex.increaseIndex();
-    console.log("INDEX PÓS SCOREINDEX", this.index);
-
     this.dayData = this.teste.day;
     this.index = scoreIndex;
     this.data = this.dayData[this.index._indexer];
-    console.log('TESTE DO DATA ~~~~~>>>>>>', this.data);
-    console.log('Teste do Index ~~~~>', this.index._indexer);
-
     setInterval(() => {
       if (this.timer != 0)
         this.timer -= 1;

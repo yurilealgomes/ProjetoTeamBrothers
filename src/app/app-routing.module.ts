@@ -42,9 +42,11 @@ const routes: Routes = [
   {
     path: 'rest',
     loadChildren: './rest/rest.module#RestPageModule'
-  },  { path: 'endactivity', loadChildren: './endactivity/endactivity.module#EndactivityPageModule' },
-
-
+  },
+  {
+    path: 'endofactivity',
+    loadChildren: './endofactivity/endofactivity.module#EndofactivityPageModule'
+  },
 ];
 
 @NgModule({

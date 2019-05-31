@@ -17,6 +17,7 @@ export class HomePage {
 
   ngOnInit() {
     this.dificuldade = this.router.snapshot.params['level'];
-    console.log('Recebido ~~~~~>', this.router.snapshot.params['level'])
+    if(!this.dificuldade)
+      this.dificuldade = null;
   }
 }

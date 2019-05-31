@@ -8,14 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserlevelPage implements OnInit {
 
   @Input() userChoiceLevel: string;
-  
+
   constructor() { }
 
   ngOnInit() {
   }
 
   defineDificuldade(dificuldade) {
-    console.log('Selected level ~~> ', dificuldade);
     this.userChoiceLevel = dificuldade;
   }
 }

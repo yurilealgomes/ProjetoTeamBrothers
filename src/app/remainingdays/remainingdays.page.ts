@@ -26,7 +26,6 @@ export class RemainingdaysPage implements OnInit {
     }, 100);
 
     this.dificuldade = this.router.snapshot.params['level'];
-    console.log('Recebido ~~~~~>', this.router.snapshot.params['level'])
   }
   
   remainingDays = 28;

@@ -31,7 +31,7 @@ export class TrainingreleasePage implements OnInit {
     {name: 'Toque de calcanhar', rep: 'x 15', gifPath: 'assets/gif/Treino-Abdômen - 13 - Toque de Calcanhar.gif', seconds: null},
     {name: 'Elevação de pernas', rep: 'x 12', gifPath: 'assets/gif/no.jpg', seconds: null},
     {name: 'Prancha', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 16 - Prancha.gif', seconds: 30},
-    {name: 'Alongamento cobra', rep: null, gifPath: 'assets/gif/Treino-Peito - 12 - Alongamento cobra.gif',seconds: 20},
+    {name: 'Alongamento cobra', rep: null, gifPath: 'assets/gif/Treino-Peito - 12 - Alongamento cobra.gif',seconds: 30},
     {name: 'Alongamento da coluna lombar lado esquerdo', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 18 - Alongamento da coluna lombar lado esquerdo.gif', seconds: 30},
     {name: 'Alongamento da coluna lombar lado direito', rep: null, gifPath: 'assets/gif/Treino-Abdômen - 19 - Alongamento da coluna lombar lado direito.gif', seconds: 30},
   ];
