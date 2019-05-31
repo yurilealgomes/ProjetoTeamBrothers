@@ -42,7 +42,8 @@ const routes: Routes = [
   {
     path: 'rest',
     loadChildren: './rest/rest.module#RestPageModule'
-  },
+  },  { path: 'endactivity', loadChildren: './endactivity/endactivity.module#EndactivityPageModule' },
+
 
 ];
 

@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList, forwardRef, ContentChild, ɵConsole, Injectable } from '@angular/core';
-import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule, Routes } from '@angular/router';
 import { TrainingreleasePage } from '../trainingrelease/trainingrelease.page';
 import { RestPage } from '../rest/rest.page';
 import { Index } from '../singleton.service';
 import { SWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core/src/linker/template_ref';
 import { HomePage } from '../home/home.page';
+
 
 
 
@@ -25,6 +26,7 @@ export class ActivityPage implements OnInit {
   template: any = 1;
   i: number = 0;
   countsec: number = null;
+  t: number = 0;
 
   constructor(private route: Router,
     private router: ActivatedRoute,
@@ -33,24 +35,25 @@ export class ActivityPage implements OnInit {
 
   public switchTemplate() {
     console.log("TAMANHO DO I ~~~~~~~~~~~~~~~~~~~~~~~~~> ", this.i);
-    console.log("TAMANHO DO I ~~~~~~~~~~~~~~~~~~~~~~~~~> ", this.dayData[this.i]);
-    console.log('@@@@@@@@@@@@@@@@@@@@@@@@ ENTROU NO SWITCH TEMPLATE @@@@@@@@@@@@@@@@@@@@@@@@')
+    console.log("TAMANHO DO I ~~~~~~~~~~~~~~~~~~~~~~~~~> ", this.dayData[this.i]);~
+    console.log(" TAMANHO DO T >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", this.t);
     if (this.template == 1) {
       this.defineTempo();
       this.template = 2;
-      console.log('TROCOU TEMPLATE PRA 2 (REST)');
+      if(this.t > this.i){
+        console.log("ENTROU NO ROUTER PAGE ~~~~~~~~~~");
+        
+      }
     } else if (this.template == 2) {
       this.template = 1;
       if(this.dayData[this.i].seconds != null )
         this.countseconds();
-      console.log('TROCOU TEMPLATE PRA 1 (ACTIVITY)')
     }
   }
 
   public switchExercise() {
-    console.log('@@@@@@@@@@@@@@@@@@@@@@@@ ENTROU NO SWITCH EXERCISE @@@@@@@@@@@@@@@@@@@@@@@@');
     this.i = this.i + 1;
-    console.log('@@@@@@@@@@@@@@@@@@@@@@@@ CHAMOU O SWITCH TEMPLATE @@@@@@@@@@@@@@@@@@@@@@@@')
+    this.t = this.t + 1;
     this.switchTemplate();
   }
 
@@ -63,11 +66,9 @@ export class ActivityPage implements OnInit {
   public async defineTempo() {
     this.timer = 3;
     var interval = setInterval(() => {
-      console.log("CONTADOR =========== ", this.timer);
       this.timer--;
       if(this.timer < 0 ){
         clearInterval(interval);
-        console.log('Ding!');
         this.switchTemplate();
       };
     }, 1000);
@@ -76,12 +77,11 @@ export class ActivityPage implements OnInit {
   public async countseconds() {
     this.countsec  = 3;
     var interval = setInterval(() => {
-      console.log("CONTADOR =========== ", this.countsec);
       this.countsec--;
       if(this.countsec < 0 ){
         clearInterval(interval);
-        console.log('Ding!');
-        this.switchExercise();
+        this.t = this.t + 1;
+        this.switchTemplate();
       };
     }, 1000);
   }
